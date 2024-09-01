@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://tonyp85-25.github.io/crafty-spa/",
+  "homepage": "https://tonyp85-25.github.io/crafty-spa",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
