@@ -4,27 +4,26 @@ on:
     push:
         branches:
             - main
-
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
-        with:
-          version: 7.29.1
-      - name: Use Node.js 18
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: "pnpm"
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --strict-peer-dependencies
-      - name: Build
-        run: pnpm run build
-      - name: Deploy with gh-pages
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          pnpm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
+            with:
+              version: 7.29.1
+          - name: Use Node.js 18
+            uses: actions/setup-node@v4
+            with:
+              node-version: 18
+              cache: "pnpm"
+          - name: Install dependencies
+            run: pnpm install --frozen-lockfile --strict-peer-dependencies
+          - name: Build
+            run: pnpm run build
+          - name: Deploy with gh-pages
+            run: |
+              git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+              pnpm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
