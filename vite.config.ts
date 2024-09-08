@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),tsconfigPaths()],
-  base: '/crafty-spa/', // https://www.npmjs.com/package/gh-pages#github-pages-project-sites
-})
+  plugins: [react(), tsconfigPaths()],
+  base: process.env.NODE_ENV === "production" ? "/crafty-spa/" : "/", // https://www.npmjs.com/package/gh-pages#github-pages-project-sites
+});
