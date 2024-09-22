@@ -19,5 +19,3 @@ export class FakeTimelineGateway implements TimelineGateway {
     });
   }
 }
-
-export const fakeTimelineGateway = new FakeTimelineGateway();

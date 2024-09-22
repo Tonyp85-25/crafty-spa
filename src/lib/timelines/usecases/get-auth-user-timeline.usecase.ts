@@ -1,11 +1,11 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { fakeTimelineGateway } from "../infra/fake.timeline.gateway";
+import { createAppAsyncThunk } from "@/lib/create-app-thunk";
 
-export const getAuthUserTimeline = createAsyncThunk(
+export const getAuthUserTimeline = createAppAsyncThunk(
   "timelines/getAuthUserTimeline",
-  async () => {
-    const { timeline } = await fakeTimelineGateway.getUserTimeline({
-      userId: "Alice",
+  async (_, { extra: { authGateway, timelineGateway } }) => {
+    const authUser = await authGateway.getAuthUser();
+    const { timeline } = await timelineGateway.getUserTimeline({
+      userId: authUser,
     });
     return timeline;
   }
