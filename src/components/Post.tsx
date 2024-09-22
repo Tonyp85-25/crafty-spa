@@ -1,6 +1,6 @@
 import { Avatar, Box, HStack, Stack, Text } from "@chakra-ui/react";
-import { LikeButton } from "./LikeButton";
 import { Link } from "react-router-dom";
+import { LikeButton } from "./LikeButton";
 
 export const Post = (msg: {
   id: string;

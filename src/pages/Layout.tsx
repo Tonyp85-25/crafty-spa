@@ -1,6 +1,6 @@
-import { Box, Container, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Sidebar } from "@/components/layout/Sidebar";
+import { Box, Container, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Outlet } from "react-router-dom";
 
 export const Layout = () => {

@@ -7,9 +7,9 @@ import {
   FiPower,
   FiTwitter,
 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import { NavButton } from "./NavButton";
 import { UserProfile } from "./UserProfile";
-import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   return (

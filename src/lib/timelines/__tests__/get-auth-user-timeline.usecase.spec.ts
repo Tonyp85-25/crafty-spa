@@ -1,8 +1,8 @@
-import { describe, expect, it } from "vitest";
-import { getAuthUserTimeline } from "../usecases/get-auth-user-timeline.usecase";
-import { FakeTimelineGateway } from "../infra/fake.timeline.gateway";
 import { FakeAuthGateway } from "@/lib/auth/infra/fake-auth.gateway";
 import { createstore } from "@/lib/create-store";
+import { describe, expect, it } from "vitest";
+import { FakeTimelineGateway } from "../infra/fake.timeline.gateway";
+import { getAuthUserTimeline } from "../usecases/get-auth-user-timeline.usecase";
 
 describe("Feature: Retrieving authenticated user's timeline", () => {
   it("Example: Alice is authenticated an can see her timeline", async () => {

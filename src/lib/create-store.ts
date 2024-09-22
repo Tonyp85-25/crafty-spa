@@ -1,7 +1,7 @@
-import { configureStore, ThunkDispatch, UnknownAction } from "@reduxjs/toolkit";
-import { timelinesSlice } from "./timelines/slices/timelines.slice";
-import { TimelineGateway } from "./timelines/model/timeline.gateway";
+import { ThunkDispatch, UnknownAction, configureStore } from "@reduxjs/toolkit";
 import { AuthGateway } from "./auth/model/auth.gateway";
+import { TimelineGateway } from "./timelines/model/timeline.gateway";
+import { timelinesSlice } from "./timelines/slices/timelines.slice";
 
 export type Dependencies = {
   timelineGateway: TimelineGateway;
