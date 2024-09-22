@@ -8,5 +8,5 @@ export const getAuthUserTimeline = createAppAsyncThunk(
       userId: authUser,
     });
     return timeline;
-  }
+  },
 );

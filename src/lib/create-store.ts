@@ -1,9 +1,4 @@
-import {
-  AnyAction,
-  configureStore,
-  ThunkDispatch,
-  UnknownAction,
-} from "@reduxjs/toolkit";
+import { configureStore, ThunkDispatch, UnknownAction } from "@reduxjs/toolkit";
 import { timelinesSlice } from "./timelines/slices/timelines.slice";
 import { TimelineGateway } from "./timelines/model/timeline.gateway";
 import { AuthGateway } from "./auth/model/auth.gateway";
